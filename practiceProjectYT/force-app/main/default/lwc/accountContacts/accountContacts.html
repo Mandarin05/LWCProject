@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title = {Title}>
+        <lightning-layout multiple-rows="true" class = "slds-p-around_medium">
+            <lightning-layout-item>
+                    <template if:true={Contacts}>
+                        <template for:each={Contacts} for:item="contact">
+                            <p key = {contact.Id}> {contact.Name} </p>
+                        </template>
+                    </template>
+                    <template if:true={NoContacts}>
+                        <p>NO Contact Found</p>
+                    </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+    
+</template>
